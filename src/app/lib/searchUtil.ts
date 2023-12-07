@@ -2,6 +2,7 @@ import courses from "./courses.json";
 import Fuse from "fuse.js";
 
 const fuseOptions = {
+  threshold: 0.1,
   keys: ["Code", "Title"],
 };
 

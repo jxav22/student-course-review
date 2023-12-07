@@ -7,9 +7,9 @@ type Props = { courseCode: string; courseTitle: string };
 function SearchResult({ courseCode, courseTitle }: Props) {
   return (
     <article className={`${styles.container} ${inter.className}`}>
-      <div className={styles.banner}/>
+      <div className={styles.banner} />
       <div className={styles.text}>
-        <span>{`${courseCode} : `}</span>
+        <span>{`${courseCode}${courseTitle ? " : " : ""}`}</span>
         {courseTitle}
       </div>
     </article>

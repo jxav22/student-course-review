@@ -1,0 +1,37 @@
+.container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #1E457F;
+
+    color: white;
+}
+
+.headerSeperator {
+    flex-basis: 2vh;
+    background-color: #4B729B;
+    width: 100vw;
+}
+
+.logoContainer {
+    width: 60vw;
+    line-height: 1vh;
+}
+
+.logoContainer > h1 {
+    font-size: 7vh;
+    font-weight: 350;
+}
+
+.logoContainer > h2 {
+    font-size: 4vh;
+    font-weight: 100;
+}
+
+.logoSeperator {
+    width: 80%;
+    height: 1px;
+    background-color: white;
+}

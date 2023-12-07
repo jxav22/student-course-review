@@ -11,7 +11,7 @@ type Props = {};
 
 export default function SearchTool() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [debouncedSearchTerm] = useDebounce(searchTerm, 200);
+  const [debouncedSearchTerm] = useDebounce(searchTerm, 500);
   const searchResults = useMemo(()=>search(debouncedSearchTerm), [debouncedSearchTerm]);
 
   return (
