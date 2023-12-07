@@ -12,7 +12,7 @@
 .headerSeperator {
     flex-basis: 2vh;
     background-color: #4B729B;
-    width: 100vw;
+    width: 100%;
 }
 
 .logoContainer {
