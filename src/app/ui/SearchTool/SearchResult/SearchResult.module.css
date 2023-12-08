@@ -9,7 +9,8 @@
 }
 
 .text {
-    padding: 1.5rem;
+    padding: 4vh 2vw 4vh 2vw;
+    font-size: 2vh;
 }
 
 .text > span {
@@ -18,7 +19,7 @@
 }
 
 .banner {
-    flex-basis: 1rem;
+    flex: 0 0 1rem;
     background-color: #285BA8;
 
     transition: flex-basis 200ms;
@@ -26,12 +27,12 @@
 
 .container:hover {
     .banner {
-        flex-basis: 1.5rem;
+        flex: 0 0 1.5rem;
     }
 }
 
 .container:active {
     .banner {
-        flex-basis: 2rem;
+        flex: 0 0 2rem;
     }
 }
