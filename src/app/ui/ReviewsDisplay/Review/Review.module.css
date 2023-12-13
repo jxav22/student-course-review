@@ -1,12 +1,13 @@
 .container {
   display: flex;
   flex-direction: column;
-  border-radius: 0.5rem;
   align-items: center;
   gap: 5vh;
   padding-bottom: 5vh;
   min-height: 27vh;
-  box-shadow: 0 0 10px -5px;
+  --border-radius: 0.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .header {
@@ -17,6 +18,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 3vh 5% 3vh 5%;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .header > span {

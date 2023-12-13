@@ -1,0 +1,24 @@
+{
+  "ELECTENG 101": [
+    {
+      "Date": "today",
+      "Grade": "A+",
+      "Overall": 1,
+      "Enjoyment": 2,
+      "Quality": 3,
+      "Difficulty": 4,
+      "Content": "The best course I have ever had the pleasure to participate in",
+      "email": "jxav258@aucklanduni.ac.nz"
+    },
+    {
+      "Date": "today",
+      "Grade": "A-",
+      "Overall": 4,
+      "Enjoyment": 3,
+      "Quality": 2,
+      "Difficulty": 1,
+      "Content": "The worst course I have ever had the displeasure to participate in",
+      "email": "jxav258@aucklanduni.ac.nz"
+    }
+  ]
+}

@@ -1,17 +1,30 @@
 import React from "react";
 import styles from "./RatingSummary.module.css";
 import HorizontallyLabelledStarRating from "../HorizontallyLabelledStarRating/HorizontallyLabelledStarRating";
+import { ReviewSummary } from "@/app/lib/types";
 
-type Props = {};
+type Props = { reviewSummary: ReviewSummary };
 
-export default function RatingSummary({}: Props) {
+export default function RatingSummary({ reviewSummary }: Props) {
   return (
     <article className={styles.container}>
-      <span>{"3 reviews total"}</span>
-      <HorizontallyLabelledStarRating label={"Enjoyment:"} rating={1} />
-      <HorizontallyLabelledStarRating label={"Quality:"} rating={1} />
-      <HorizontallyLabelledStarRating label={"Difficulty:"} rating={1} />
-      <HorizontallyLabelledStarRating label={"Overall:"} rating={1} />
+      <span>{`${reviewSummary.numberOfReviews} reviews total`}</span>
+      <HorizontallyLabelledStarRating
+        label={"Enjoyment:"}
+        rating={reviewSummary.averageEnjoyment}
+      />
+      <HorizontallyLabelledStarRating
+        label={"Quality:"}
+        rating={reviewSummary.averageQuality}
+      />
+      <HorizontallyLabelledStarRating
+        label={"Difficulty:"}
+        rating={reviewSummary.averageDifficulty}
+      />
+      <HorizontallyLabelledStarRating
+        label={"Overall:"}
+        rating={reviewSummary.averageOverall}
+      />
     </article>
   );
 }

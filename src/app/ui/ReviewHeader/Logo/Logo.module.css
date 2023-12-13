@@ -8,6 +8,7 @@
   box-shadow: 0 0 5vh -2vh black;
 
   color: white;
+  transition: transform 100ms;
 }
 
 .logoContainer > h1 {
@@ -28,4 +29,9 @@
   margin: 1vh 0 1vh 0;
   background-color: white;
   opacity: 50%;
+}
+
+.logoContainer:hover{
+  transform: scale(1.03);
+  cursor: pointer;
 }
