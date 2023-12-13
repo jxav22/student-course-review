@@ -9,3 +9,18 @@
   color: #1e457f;
   padding-left: 2rem;
 }
+
+.loadMoreButton {
+  all: unset;
+  font-weight: bold;
+  font-size: 2.5vh;
+  color: #1e457f;
+  text-align: center;
+  transition: transform 300ms;
+  padding-top: 5vh;
+}
+
+.loadMoreButton:hover{
+  cursor: pointer;
+  transform: translateY(0.5vh);
+}

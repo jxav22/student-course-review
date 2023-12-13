@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SearchResultsDisplay.module.css";
 import SearchResult from "../SearchResult/SearchResult";
 import { inter } from "@/app/lib/fonts";
@@ -9,7 +9,9 @@ type Props = {
 };
 
 function SearchResultsDisplay({ searchResults }: Props) {
+  const [amountToDisplay, setAmountToDisplay] = useState(10);
   const numberOfResults = searchResults.length;
+  const resultsToDisplay = searchResults.slice(0, amountToDisplay);
 
   const getInfoText = () => {
     if (numberOfResults < 1) {
@@ -26,13 +28,23 @@ function SearchResultsDisplay({ searchResults }: Props) {
       <span className={`${inter.className} ${styles.infoText}`}>
         {getInfoText()}
       </span>
-      {searchResults.map((searchResult, index) => (
+      {resultsToDisplay.map((searchResult, index) => (
         <SearchResult
           key={index}
           courseCode={searchResult.Code}
           courseTitle={searchResult.Title}
         />
       ))}
+      {resultsToDisplay.length < numberOfResults && (
+        <button
+          onClick={() => {
+            setAmountToDisplay(amountToDisplay + 10);
+          }}
+          className={styles.loadMoreButton}
+        >
+          Load More . . .
+        </button>
+      )}
     </section>
   );
 }
