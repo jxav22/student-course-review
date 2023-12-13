@@ -20,5 +20,27 @@
       "Content": "The worst course I have ever had the displeasure of participating in",
       "email": "jxav258@aucklanduni.ac.nz"
     }
+  ],
+  "SOFTENG 350": [
+    {
+      "Date": "today",
+      "Grade": "B+",
+      "Overall": 4,
+      "Enjoyment": 5,
+      "Quality": 5,
+      "Difficulty": 5,
+      "Content": "This was pretty hard ngl",
+      "email": "jxav258@aucklanduni.ac.nz"
+    },
+    {
+      "Date": "today",
+      "Grade": "A-",
+      "Overall": 4,
+      "Enjoyment": 3,
+      "Quality": 2,
+      "Difficulty": 1,
+      "Content": "idk i personally liked it",
+      "email": "jxav258@aucklanduni.ac.nz"
+    }
   ]
 }

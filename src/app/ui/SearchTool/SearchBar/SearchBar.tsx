@@ -10,8 +10,7 @@ function SearchBar({ handleValue }: Props) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newSearchTerm = event.target.value;
-    setSearchTerm(newSearchTerm);
+    setSearchTerm(event.target.value);
   };
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 .container {
   height: min-content;
-  padding-top: 7vh;
+  padding-top: 5vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -10,6 +10,9 @@
   box-shadow: 0 0 5px -1px black;
 
   color: white;
+
+  margin-right: 15vw;
+  margin-left: 15vw;
 }
 
 .headerSeperator {
@@ -24,12 +27,12 @@
 }
 
 .logoContainer > h1 {
-  font-size: 6vh;
+  font-size: 4vh;
   font-weight: 350;
 }
 
 .logoContainer > h2 {
-  font-size: 4vh;
+  font-size: 3vh;
   font-weight: 100;
 }
 

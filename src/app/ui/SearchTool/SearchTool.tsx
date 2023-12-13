@@ -43,7 +43,7 @@ export default function SearchTool() {
   };
 
   useEffect(() => {
-    updateSearchParams(searchTerm);
+    updateSearchParams(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
 
   return (
