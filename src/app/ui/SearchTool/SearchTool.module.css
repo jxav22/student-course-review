@@ -2,6 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  gap: 10vh;
+  gap: 5vh;
   width: 60vw;
 }

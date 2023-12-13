@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-  useRef,
-  Dispatch,
-  SetStateAction,
-} from "react";
+import React, { useEffect, useRef, Dispatch, SetStateAction } from "react";
 import styles from "./SearchBar.module.css";
 
 type Props = {
@@ -15,8 +9,9 @@ function SearchBar({ handleValue }: Props) {
   const [searchTerm, setSearchTerm] = handleValue;
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(event.target.value);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newSearchTerm = event.target.value;
+    setSearchTerm(newSearchTerm);
   };
 
   useEffect(() => {
@@ -38,7 +33,7 @@ function SearchBar({ handleValue }: Props) {
       ref={inputRef}
       className={styles.input}
       value={searchTerm}
-      onChange={handleInputChange}
+      onChange={handleChange}
       placeholder="Enter course code"
     />
   );

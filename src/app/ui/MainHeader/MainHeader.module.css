@@ -1,5 +1,6 @@
 .container {
-  height: 50vh;
+  height: min-content;
+  padding-top: 7vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -23,7 +24,7 @@
 }
 
 .logoContainer > h1 {
-  font-size: 7vh;
+  font-size: 6vh;
   font-weight: 350;
 }
 

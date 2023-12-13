@@ -7,10 +7,10 @@ export function summarizeReviews(reviews: Review[]): ReviewSummary {
   if (reviews.length === 0) {
     return {
       numberOfReviews: 0,
-      averageEnjoyment: 5,
-      averageQuality: 5,
-      averageDifficulty: 5,
-      averageOverall: 5,
+      averageEnjoyment: 0,
+      averageQuality: 0,
+      averageDifficulty: 0,
+      averageOverall: 0,
     };
   }
 
