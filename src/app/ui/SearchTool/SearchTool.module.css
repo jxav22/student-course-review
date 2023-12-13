@@ -5,3 +5,9 @@
   gap: 5vh;
   width: 60vw;
 }
+
+@media (max-width: 600px) {
+  .container {
+    width: 90vw;
+  }    
+}

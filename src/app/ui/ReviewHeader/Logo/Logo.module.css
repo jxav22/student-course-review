@@ -30,8 +30,3 @@
   background-color: white;
   opacity: 50%;
 }
-
-.logoContainer:hover{
-  transform: scale(1.03);
-  cursor: pointer;
-}

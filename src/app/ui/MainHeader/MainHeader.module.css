@@ -1,18 +1,12 @@
 .container {
-  height: min-content;
-  padding-top: 5vh;
+  padding-top: 10vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap: 2vh;
   align-items: center;
   background-color: #1e457f;
   box-shadow: 0 0 5px -1px black;
-
   color: white;
-
-  margin-right: 15vw;
-  margin-left: 15vw;
 }
 
 .headerSeperator {
@@ -40,4 +34,10 @@
   width: 80%;
   height: 1px;
   background-color: white;
+}
+
+@media (max-width: 600px) {
+  .logoContainer {
+    width: calc(90vw - 1rem);
+  }    
 }

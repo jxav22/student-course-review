@@ -10,7 +10,11 @@
 }
 
 .text {
-  padding: 4vh 2vw 4vh 2vw;
+  --padding-left-right: 2vw;
+  --padding-top-bottom: 4vh;
+
+  padding: var(--padding-top-bottom) var(--padding-left-right)
+    var(--padding-top-bottom) var(--padding-left-right);
   font-size: 2vh;
 }
 
@@ -20,7 +24,11 @@
 }
 
 .banner {
-  flex: 0 0 1rem;
+  --unselected-width: 1rem;
+  --hover-width: 1.5rem;
+  --selected-width: 2rem;
+
+  flex: 0 0 var(--unselected-width);
   background-color: #285ba8;
 
   transition: flex-basis 200ms;
@@ -30,12 +38,24 @@
   cursor: pointer;
 
   .banner {
-    flex: 0 0 1.5rem;
+    flex: 0 0 var(--hover-width);
   }
 }
 
 .container:active {
   .banner {
-    flex: 0 0 2rem;
+    flex: 0 0 var(--selected-width);
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    --unselected-width: 0.7rem;
+    --hover-width: 1rem;
+    --selected-width: 1.3rem;
+  }
+
+  .text {
+    --padding-left-right: 5vw;
   }
 }

@@ -9,7 +9,9 @@ import MainHeader from "./ui/MainHeader/MainHeader";
 export default function Home() {
   return (
     <main>
-      <MainHeader />
+      <div className={styles.headerContainer}>
+        <MainHeader />
+      </div>
       <div className={styles.searchToolContainer}>
         <SearchTool />
       </div>

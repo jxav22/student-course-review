@@ -42,7 +42,7 @@ function SearchResultsDisplay({ searchResults }: Props) {
           }}
           className={styles.loadMoreButton}
         >
-          Load More . . .
+          load more . . .
         </button>
       )}
     </section>
