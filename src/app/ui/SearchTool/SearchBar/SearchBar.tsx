@@ -1,11 +1,17 @@
-import React, { useState, useEffect, useRef, Dispatch, SetStateAction } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  Dispatch,
+  SetStateAction,
+} from "react";
 import styles from "./SearchBar.module.css";
 
 type Props = {
   handleValue: [string, Dispatch<SetStateAction<string>>];
 };
 
-function SearchBar({handleValue}: Props) {
+function SearchBar({ handleValue }: Props) {
   const [searchTerm, setSearchTerm] = handleValue;
   const inputRef = useRef<HTMLInputElement>(null);
 

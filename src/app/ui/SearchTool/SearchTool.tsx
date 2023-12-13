@@ -12,14 +12,15 @@ type Props = {};
 export default function SearchTool() {
   const [searchTerm, setSearchTerm] = useState("");
   const [debouncedSearchTerm] = useDebounce(searchTerm, 500);
-  const searchResults = useMemo(()=>search(debouncedSearchTerm), [debouncedSearchTerm]);
+  const searchResults = useMemo(
+    () => search(debouncedSearchTerm),
+    [debouncedSearchTerm]
+  );
 
   return (
     <section className={styles.container}>
       <SearchBar handleValue={[searchTerm, setSearchTerm]} />
-      <SearchResultsDisplay
-        searchResults={searchResults}
-      />
+      <SearchResultsDisplay searchResults={searchResults} />
     </section>
   );
 }

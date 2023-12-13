@@ -1,31 +1,31 @@
 .logoContainer {
-    display: flex;
-    flex-direction: column;
-    padding: 10vh 6vh 7vh 4vh;
-    width: max-content;
-    background-color: #1E457F;
-    border-radius: 7vh 0 7vh 0;
-    box-shadow: 0 0 5vh -2vh black;
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 6vh 7vh 4vh;
+  width: max-content;
+  background-color: #1e457f;
+  border-radius: 7vh 0 7vh 0;
+  box-shadow: 0 0 5vh -2vh black;
 
-    color: white;
+  color: white;
 }
 
 .logoContainer > h1 {
-    font-size: 4vh;
-    font-weight: 350;
-    margin: unset;
+  font-size: 4vh;
+  font-weight: 350;
+  margin: unset;
 }
 
 .logoContainer > h2 {
-    font-size: 3vh;
-    font-weight: 100;
-    margin: unset;
+  font-size: 3vh;
+  font-weight: 100;
+  margin: unset;
 }
 
 .logoSeperator {
-    width: 110%;
-    height: 1px;
-    margin: 1vh 0 1vh 0;
-    background-color: white;
-    opacity: 50%;
+  width: 110%;
+  height: 1px;
+  margin: 1vh 0 1vh 0;
+  background-color: white;
+  opacity: 50%;
 }

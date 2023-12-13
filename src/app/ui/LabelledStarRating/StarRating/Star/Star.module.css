@@ -1,0 +1,17 @@
+.star {
+  transform: rotate(180deg);
+  width: 2.5vh;
+  height: 2.5vh;
+}
+
+.star > path {
+  fill: #3367b4;
+}
+
+.isActive {
+  opacity: 100%;
+}
+
+.isInactive {
+  opacity: 50%;
+}

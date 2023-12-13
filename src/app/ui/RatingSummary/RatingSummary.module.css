@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: min-content;
+  gap: 1.5vh;
+}
+
+.container > span {
+  font-size: 1.5vh;
+}

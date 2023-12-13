@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  align-items: center;
+  gap: 5vh;
+  padding-bottom: 5vh;
+  min-height: 27vh;
+  box-shadow: 0 0 10px -5px;
+}
+
+.header {
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vh 5% 3vh 5%;
+}
+
+.header > span {
+  font-size: 1.5vh;
+  font-weight: 500;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5vh;
+  max-width: 90%;
+}

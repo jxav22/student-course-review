@@ -1,39 +1,39 @@
 .container {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 2vh;
-    align-items: center;
-    background-color: #1E457F;
-    box-shadow: 0 0 5px -1px black;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2vh;
+  align-items: center;
+  background-color: #1e457f;
+  box-shadow: 0 0 5px -1px black;
 
-    color: white;
+  color: white;
 }
 
 .headerSeperator {
-    flex-basis: 2vh;
-    background-color: #4B729B;
-    width: 100%;
+  flex-basis: 2vh;
+  background-color: #4b729b;
+  width: 100%;
 }
 
 .logoContainer {
-    width: 60vw;
-    line-height: 1vh;
+  width: 60vw;
+  line-height: 1vh;
 }
 
 .logoContainer > h1 {
-    font-size: 7vh;
-    font-weight: 350;
+  font-size: 7vh;
+  font-weight: 350;
 }
 
 .logoContainer > h2 {
-    font-size: 4vh;
-    font-weight: 100;
+  font-size: 4vh;
+  font-weight: 100;
 }
 
 .logoSeperator {
-    width: 80%;
-    height: 1px;
-    background-color: white;
+  width: 80%;
+  height: 1px;
+  background-color: white;
 }

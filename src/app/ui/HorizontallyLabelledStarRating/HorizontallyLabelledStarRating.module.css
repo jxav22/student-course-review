@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  gap: 1vh;
+  align-items: center;
+}
+
+.label {
+  font-size: 1.5vh;
+}
