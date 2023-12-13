@@ -2,6 +2,8 @@
   transform: rotate(180deg);
   width: 2.5vh;
   height: 2.5vh;
+  animation: spin 1s linear infinite;
+  animation-play-state: paused;
 }
 
 .star > path {
@@ -14,4 +16,15 @@
 
 .isInactive {
   opacity: 10%;
+}
+
+.star:hover {
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {transform: rotate(-180deg);}
 }
