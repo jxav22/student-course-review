@@ -19,12 +19,12 @@ function handleUndefinedString(undefinedString: any) {
 }
 
 export default function SearchTool() {
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const { replace } = useRouter();
+  // const searchParams = useSearchParams();
+  // const pathname = usePathname();
+  // const { replace } = useRouter();
 
   const [searchTerm, setSearchTerm] = useState(
-    handleUndefinedString(searchParams.get("query")?.toString())
+    "" // handleUndefinedString(searchParams.get("query")?.toString())
   );
   const [debouncedSearchTerm] = useDebounce(searchTerm, 500);
 
@@ -32,32 +32,32 @@ export default function SearchTool() {
     return search(debouncedSearchTerm);
   }, [debouncedSearchTerm]);
 
-  const updateSearchParams = (newSearchTerm: string) => {
-    if (newSearchTerm == debouncedSearchTerm) {
-      return null;
-    }
+  // const updateSearchParams = (newSearchTerm: string) => {
+  //   if (newSearchTerm == debouncedSearchTerm) {
+  //     return null;
+  //   }
 
-    const params = new URLSearchParams(searchParams);
-    if (newSearchTerm == "") {
-      params.delete("query");
-    } else {
-      params.set("query", newSearchTerm);
-    }
-    replace(`${pathname}?${params.toString()}`);
-  };
+  //   const params = new URLSearchParams(searchParams);
+  //   if (newSearchTerm == "") {
+  //     params.delete("query");
+  //   } else {
+  //     params.set("query", newSearchTerm);
+  //   }
+  //   replace(`${pathname}?${params.toString()}`);
+  // };
 
-  useEffect(() => {
-    const oldSearchTerm = searchParams.get("query")?.toString();
-    if (oldSearchTerm != debouncedSearchTerm) {
-      const params = new URLSearchParams(searchParams);
-      if (debouncedSearchTerm == "") {
-        params.delete("query");
-      } else {
-        params.set("query", debouncedSearchTerm);
-      }
-      replace(`${pathname}?${params.toString()}`);
-    }
-  }, [debouncedSearchTerm, searchParams]);
+  // useEffect(() => {
+  //   const oldSearchTerm = searchParams.get("query")?.toString();
+  //   if (oldSearchTerm != debouncedSearchTerm) {
+  //     const params = new URLSearchParams(searchParams);
+  //     if (debouncedSearchTerm == "") {
+  //       params.delete("query");
+  //     } else {
+  //       params.set("query", debouncedSearchTerm);
+  //     }
+  //     replace(`${pathname}?${params.toString()}`);
+  //   }
+  // }, [debouncedSearchTerm, searchParams]);
 
   return (
     <section className={styles.container}>
