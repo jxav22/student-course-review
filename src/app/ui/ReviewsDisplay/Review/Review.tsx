@@ -16,7 +16,11 @@ export default function Review({ review }: Props) {
         <LabelledStarRating label={"Quality"} rating={review.Quality} />
         <LabelledStarRating label={"Difficulty"} rating={review.Difficulty} />
       </section>
-      <section className={styles.content}>{review.Content}</section>
+      <section className={styles.content}>
+        {review.Content.map((content, index) => (
+          <p key={index}>{content}</p>
+        ))}
+      </section>
     </section>
   );
 }

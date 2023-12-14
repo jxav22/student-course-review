@@ -1,5 +1,6 @@
 import courses from "./courses.json";
 import Fuse from "fuse.js";
+import { Course } from "./types";
 
 const fuseOptions = {
   threshold: 0.1,
@@ -8,11 +9,14 @@ const fuseOptions = {
 
 const fuse = new Fuse(courses, fuseOptions);
 
-const processResults = (results: any) =>
-  results.map((result: any) => ({
+function processResults(results: any): Course[] {
+  return results.map((result: any) => ({
     Code: result.item.Code,
     Title: result.item.Title,
     Stage: result.item.Stage,
   }));
+}
 
-export const search = (term: string) => processResults(fuse.search(term));
+export function search(term: string): Course[]{
+  return processResults(fuse.search(term));
+}

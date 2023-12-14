@@ -10,27 +10,6 @@
   padding-left: 2rem;
 }
 
-.loadMoreButton {
-  all: unset;
-  font-weight: bold;
-  color: #1e457f;
-  text-align: center;
-  transition: 300ms;
-  padding-top: 5vh;
-
-  --padding-bottom: 15vh;
-  padding-bottom: var(--padding-bottom);
-}
-
-.loadMoreButton:hover{
-  opacity: 90%;
-  cursor: pointer;
-  
-  --translation-length: 0.7vh;
-  transform: translateY(var(--translation-length));
-  padding-bottom: calc(var(--padding-bottom) - var(--translation-length));
-}
-
 @media (max-width: 600px) {
   .infoText {
     text-align: center;

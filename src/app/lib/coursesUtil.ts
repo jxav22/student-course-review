@@ -1,7 +1,10 @@
-import courses from "./courses.json";
+import { Course } from "./types";
+import courses from './courses.json';
 
-export function getAllCourses(): any {
-  return courses.map((course) => {
-    course: course.Code;
-  });
+export function getXCourses(x: number): Course[] {
+  return courses.slice(0, x);
+}
+
+export function getCourses(): Course[]{
+  return courses;
 }

@@ -11,19 +11,20 @@ export default function RatingSummary({ reviewSummary }: Props) {
       <span>{`${reviewSummary.numberOfReviews} reviews total`}</span>
       <HorizontallyLabelledStarRating
         label={"Enjoyment:"}
-        rating={reviewSummary.averageEnjoyment}
+        rating={reviewSummary.Enjoyment}
       />
       <HorizontallyLabelledStarRating
         label={"Quality:"}
-        rating={reviewSummary.averageQuality}
+        
+        rating={reviewSummary.Quality}
       />
       <HorizontallyLabelledStarRating
         label={"Difficulty:"}
-        rating={reviewSummary.averageDifficulty}
+        rating={reviewSummary.Difficulty}
       />
       <HorizontallyLabelledStarRating
         label={"Overall:"}
-        rating={reviewSummary.averageOverall}
+        rating={reviewSummary.Overall}
       />
     </article>
   );

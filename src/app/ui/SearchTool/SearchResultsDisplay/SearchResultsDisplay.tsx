@@ -3,6 +3,7 @@ import styles from "./SearchResultsDisplay.module.css";
 import SearchResult from "../SearchResult/SearchResult";
 import { inter } from "@/app/lib/fonts";
 import { FuseResult } from "fuse.js";
+import LoadMoreButton from "./LoadMoreButton/LoadMoreButton";
 
 type Props = {
   searchResults: Array<{ Code: string; Title: string; Stage: string }>;
@@ -35,16 +36,12 @@ function SearchResultsDisplay({ searchResults }: Props) {
           courseTitle={searchResult.Title}
         />
       ))}
-      {resultsToDisplay.length < numberOfResults && (
-        <button
-          onClick={() => {
-            setAmountToDisplay(amountToDisplay + 10);
-          }}
-          className={styles.loadMoreButton}
-        >
-          load more . . .
-        </button>
-      )}
+      <LoadMoreButton
+        enableCondition={amountToDisplay < numberOfResults}
+        handleOnClick={() => {
+          setAmountToDisplay(amountToDisplay + 10);
+        }}
+      />
     </section>
   );
 }

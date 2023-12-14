@@ -5,13 +5,19 @@ export type Review = {
   Overall: number;
   Grade: string;
   Date: string;
-  Content: string;
+  Content: string[];
 };
 
 export type ReviewSummary = {
   numberOfReviews: number;
-  averageEnjoyment: number;
-  averageQuality: number;
-  averageDifficulty: number;
-  averageOverall: number;
+  Enjoyment: number;
+  Quality: number;
+  Difficulty: number;
+  Overall: number;
+};
+
+export type Course = {
+  Code: string;
+  Title: string;
+  Stage: string;
 };

@@ -1,20 +1,39 @@
 import reviews from "./reviews.json";
 import { Review, ReviewSummary } from "./types";
 
-const allReviews: any = reviews;
+export function generateReview(
+  Enjoyment: number,
+  Quality: number,
+  Difficulty: number,
+  Overall: number,
+  Grade: string,
+  Date: string,
+  Content: string[]
+): Review {
+  return { Enjoyment, Quality, Difficulty, Overall, Grade, Date, Content };
+}
 
-export function summarizeReviews(reviews: Review[]): ReviewSummary {
-  if (reviews.length === 0) {
-    return {
-      numberOfReviews: 0,
-      averageEnjoyment: 0,
-      averageQuality: 0,
-      averageDifficulty: 0,
-      averageOverall: 0,
-    };
-  }
+function generateReviewSummary(
+  numberOfReviews: number,
+  Enjoyment: number,
+  Quality: number,
+  Difficulty: number,
+  Overall: number
+): ReviewSummary {
+  return {
+    numberOfReviews,
+    Enjoyment,
+    Quality,
+    Difficulty,
+    Overall,
+  };
+}
 
-  // Calculate averages
+function generateEmptySummary(): ReviewSummary {
+  return generateReviewSummary(0, 0, 0, 0, 0);
+}
+
+function sumReviews(reviews: Review[]): ReviewSummary {
   const totalEnjoyment = reviews.reduce((acc, curr) => acc + curr.Enjoyment, 0);
   const totalQuality = reviews.reduce((acc, curr) => acc + curr.Quality, 0);
   const totalDifficulty = reviews.reduce(
@@ -23,22 +42,46 @@ export function summarizeReviews(reviews: Review[]): ReviewSummary {
   );
   const totalOverall = reviews.reduce((acc, curr) => acc + curr.Overall, 0);
 
-  const numberOfReviews = reviews.length;
-  const averageEnjoyment = totalEnjoyment / numberOfReviews;
-  const averageQuality = totalQuality / numberOfReviews;
-  const averageDifficulty = totalDifficulty / numberOfReviews;
-  const averageOverall = totalOverall / numberOfReviews;
+  return generateReviewSummary(
+    reviews.length,
+    totalEnjoyment,
+    totalQuality,
+    totalDifficulty,
+    totalOverall
+  );
+}
 
-  return {
+function averageReviews(reviews: Review[]): ReviewSummary {
+  const totalReviews = sumReviews(reviews);
+
+  const numberOfReviews = totalReviews.numberOfReviews;
+  const averageEnjoyment = totalReviews.Enjoyment / numberOfReviews;
+  const averageQuality = totalReviews.Quality / numberOfReviews;
+  const averageDifficulty = totalReviews.Difficulty / numberOfReviews;
+  const averageOverall = totalReviews.Overall / numberOfReviews;
+
+  return generateReviewSummary(
     numberOfReviews,
     averageEnjoyment,
     averageQuality,
     averageDifficulty,
-    averageOverall,
-  };
+    averageOverall
+  );
 }
 
-export function getReviews(code: string): Review[] {
-  const courseReviews = allReviews[code];
+export function summarizeReviews(reviews: Review[]): ReviewSummary {
+  if (reviews.length === 0) {
+    return generateEmptySummary();
+  }
+
+  return averageReviews(reviews);
+}
+
+export async function getReviews(code: string): Promise<Review[]> {
+  const courseReviews = (
+    reviews as {
+      [key: string]: Review[];
+    }
+  )[code];
   return courseReviews == null ? [] : courseReviews;
 }

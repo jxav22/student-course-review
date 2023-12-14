@@ -8,7 +8,7 @@ type Props = { courseCode: string; courseTitle: string };
 function SearchResult({ courseCode, courseTitle }: Props) {
   return (
     <Link
-      href={`/review/${courseCode}`}
+      href={`/${courseCode}`}
       prefetch={false}
       className={`${styles.container} ${inter.className}`}
     >
