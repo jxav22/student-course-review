@@ -33,7 +33,8 @@ export default function SearchTool() {
   }, [debouncedSearchTerm]);
 
   const updateSearchParams = (newSearchTerm: string) => {
-    if (newSearchTerm == debouncedSearchTerm) {
+    const oldSearchTerm = searchParams.get("query")?.toString();
+    if (newSearchTerm == oldSearchTerm) {
       return null;
     }
 
