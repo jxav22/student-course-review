@@ -17,8 +17,8 @@ function decodeCourse(course: string): string {
 }
 
 export async function generateStaticParams() {
-  const courses = search("electeng");
-  // const courses = getCourses();
+  // const courses = search("electeng");
+  const courses = getCourses();
   return encodeCourses(courses);
 }
 
