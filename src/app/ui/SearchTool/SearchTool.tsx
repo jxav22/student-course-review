@@ -33,8 +33,7 @@ export default function SearchTool() {
   }, [debouncedSearchTerm]);
 
   const updateSearchParams = (newSearchTerm: string) => {
-    const oldSearchTerm = searchParams.get("query")?.toString();
-    if (newSearchTerm == oldSearchTerm) {
+    if (newSearchTerm == debouncedSearchTerm) {
       return null;
     }
 
@@ -48,8 +47,17 @@ export default function SearchTool() {
   };
 
   useEffect(() => {
-    updateSearchParams(debouncedSearchTerm);
-  }, [debouncedSearchTerm]);
+    const oldSearchTerm = searchParams.get("query")?.toString();
+    if (oldSearchTerm != debouncedSearchTerm) {
+      const params = new URLSearchParams(searchParams);
+      if (debouncedSearchTerm == "") {
+        params.delete("query");
+      } else {
+        params.set("query", debouncedSearchTerm);
+      }
+      replace(`${pathname}?${params.toString()}`);
+    }
+  }, [debouncedSearchTerm, searchParams]);
 
   return (
     <section className={styles.container}>
