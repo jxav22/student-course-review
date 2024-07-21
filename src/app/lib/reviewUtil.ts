@@ -29,7 +29,7 @@ function generateReviewSummary(
   };
 }
 
-function generateEmptySummary(): ReviewSummary {
+export function generateEmptySummary(): ReviewSummary {
   return generateReviewSummary(0, 0, 0, 0, 0);
 }
 
