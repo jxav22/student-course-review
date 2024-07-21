@@ -27,6 +27,12 @@ I will create a highly optimized website, that will be able to run for *free*, f
 
 ## The process
 
+### Trello
+
+This is the trello board that i'm using for project managment, i'm keeping it updated with the current status of the project
+
+[>> The trello board](https://trello.com/b/ooukvJUt/student-course-review)
+
 ### Conceptualization
 
 (i'll add the details after i've finished the implementation)
@@ -35,7 +41,7 @@ I will create a highly optimized website, that will be able to run for *free*, f
 
 I started of with ideating a design in figma - I'm pretty new to graphic design, I tried for something minimal and functional.
 
-[>> The figma design file](https://www.figma.com/file/86gyEknwNhBDZGXhfbXA50/Student-Course-Review?type=design&node-id=0-1&mode=design&t=Fd4X2rO3qY9ySA9r-0)
+[>> The figma design file](https://www.figma.com/community/file/1396750512356365480)
 
 I tried to stay consistent with the style my university uses, hopefully there won't be a copyright issue in the future
 
