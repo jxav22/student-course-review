@@ -1,6 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import ReviewsDisplay from "./ReviewsDisplay";
-import { generateReview } from "@/app/lib/reviewUtil";
+import {
+  generateReview,
+  getRandomReview,
+} from "@/app/lib/reviewUtil";
+import { Review } from "@/app/lib/types";
 
 const meta = {
   title: "ReviewsDisplay",
@@ -11,25 +15,27 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+let reviews: Review[] = [];
+
 export const NoReviews: Story = {
   args: {
-    reviews: [],
+    reviews,
   },
 };
+
+reviews = [getRandomReview()];
 
 export const OneReview: Story = {
   args: {
-    reviews: [generateReview(5, 5, 5, 5, "A", "2021-01-01", ["Great!"])],
+    reviews,
   },
 };
 
+reviews = [getRandomReview(), getRandomReview(), getRandomReview(), getRandomReview(), getRandomReview()];
+
 export const ManyReviews: Story = {
   args: {
-    reviews: [
-      generateReview(5, 5, 5, 5, "A", "2021-01-01", ["Great!"]),
-      generateReview(1, 1, 1, 1, "F", "2021-01-02", ["Bad!"]),
-      generateReview(3, 3, 3, 3, "C", "2021-01-03", ["Okay!"]),
-    ],
+    reviews,
   },
 };
 
@@ -72,42 +78,6 @@ export const LongReview: Story = {
         "Mind-boggling!",
         "Mind-bending",
       ]),
-    ],
-  },
-};
-
-export const VariableLengthReviews: Story = {
-  args: {
-    reviews: [
-      generateReview(5, 5, 5, 5, "A", "2021-01-01", ["Great!"]),
-      generateReview(1, 1, 1, 1, "F", "2021-01-02", [
-        "Bad!",
-        "Terrible!",
-        "Awful!",
-        "Horrible!",
-        "Atrocious!",
-        "Bad!",
-        "Terrible!",
-        "Awful!",
-        "Horrible!",
-        "Atrocious!",
-        "Bad!",
-        "Terrible!",
-        "Awful!",
-        "Horrible!",
-        "Atrocious!",
-        "Bad!",
-        "Terrible!",
-        "Awful!",
-        "Horrible!",
-        "Atrocious!",
-      ]),
-      generateReview(3, 3, 3, 3, "C", "2021-01-03", [
-        "Okay!",
-        "Buddy!",
-        "Retard!",
-      ]),
-      generateReview(1, 1, 1, 1, "F", "2024-01-03", ["Love this!"]),
     ],
   },
 };
