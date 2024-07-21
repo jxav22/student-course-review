@@ -27,6 +27,12 @@ I will create a highly optimized website, that will be able to run for *free*, f
 
 ## The process
 
+### Trello
+
+This is the trello board that i'm using for project managment, i'm keeping it updated with the current status of the project
+
+[>> The trello board](https://trello.com/b/ooukvJUt/student-course-review)
+
 ### Conceptualization
 
 (i'll add the details after i've finished the implementation)
