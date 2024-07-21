@@ -1,18 +1,28 @@
 import reviews from "./reviews.json";
 import { Review, ReviewSummary } from "./types";
 
-export function getRandomReview(): Review {
+function getRandomCategory(): string {
   // Get all the keys of the reviews object
   const reviewCategories = Object.keys(reviews);
 
   // Choose a random key (category)
-  const randomCategory = reviewCategories[Math.floor(Math.random() * reviewCategories.length)];
+  const randomCategory =
+    reviewCategories[Math.floor(Math.random() * reviewCategories.length)];
 
-  // Get the reviews array for the chosen category
-  const categoryReviews = (reviews as any)[randomCategory];
+  return randomCategory;
+}
+
+export function getRandomReview(): Review {
+  // Get the reviews array for a random non-empty category
+  let categoryReviews = [];
+  while (categoryReviews.length == 0) {
+    const randomCategory = getRandomCategory();
+    categoryReviews = (reviews as { [key: string]: any })[randomCategory];
+  }
 
   // Choose a random review from the category
-  const randomReview = categoryReviews[Math.floor(Math.random() * categoryReviews.length)];
+  const randomReview =
+    categoryReviews[Math.floor(Math.random() * categoryReviews.length)];
 
   return randomReview;
 }

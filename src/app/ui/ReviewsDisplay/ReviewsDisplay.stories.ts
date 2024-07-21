@@ -25,7 +25,7 @@ export const NoReviews: Story = {
 
 reviews = [getRandomReview()];
 
-export const OneReview: Story = {
+export const RandomReview: Story = {
   args: {
     reviews,
   },
@@ -33,7 +33,7 @@ export const OneReview: Story = {
 
 reviews = [getRandomReview(), getRandomReview(), getRandomReview(), getRandomReview(), getRandomReview()];
 
-export const ManyReviews: Story = {
+export const ManyRandomReviews: Story = {
   args: {
     reviews,
   },
