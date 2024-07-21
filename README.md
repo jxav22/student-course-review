@@ -41,7 +41,7 @@ This is the trello board that i'm using for project managment, i'm keeping it up
 
 I started of with ideating a design in figma - I'm pretty new to graphic design, I tried for something minimal and functional.
 
-[>> The figma design file](https://www.figma.com/file/86gyEknwNhBDZGXhfbXA50/Student-Course-Review?type=design&node-id=0-1&mode=design&t=Fd4X2rO3qY9ySA9r-0)
+[>> The figma design file](https://www.figma.com/community/file/1396750512356365480)
 
 I tried to stay consistent with the style my university uses, hopefully there won't be a copyright issue in the future
 
