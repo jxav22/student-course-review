@@ -5,7 +5,6 @@ import { generateEmptySummary } from "@/app/lib/reviewUtil";
 const meta = {
   title: "ReviewHeader",
   component: ReviewHeader,
-  tags: ["autodocs"],
 } satisfies Meta<typeof ReviewHeader>;
 
 export default meta;

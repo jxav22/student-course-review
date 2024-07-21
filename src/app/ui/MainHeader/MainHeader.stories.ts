@@ -4,7 +4,6 @@ import MainHeader from "./MainHeader";
 const meta = {
   title: "MainHeader",
   component: MainHeader,
-  tags: ["autodocs"],
 } satisfies Meta<typeof MainHeader>;
 
 export default meta;
