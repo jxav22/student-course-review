@@ -6,8 +6,9 @@
 
   --top-left-border-radius: 7vh;
   --right-border-radius: 1vh;
+  --border-bottom-left-radius: 0;
   border-radius: var(--top-left-border-radius) var(--right-border-radius)
-    var(--right-border-radius) 0;
+    var(--right-border-radius) var(--border-bottom-left-radius);
 
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
@@ -34,7 +35,7 @@
   justify-content: center;
 
   background-color: #ededed;
-  border-radius: 0 0 var(--right-border-radius) 0;
+  border-radius: 0 0 var(--right-border-radius) var(--border-bottom-left-radius);
 }
 
 .headerPositioner > h2 {
@@ -45,4 +46,14 @@
   font-weight: 500;
   font-size: 3vh;
   color: #736e6e;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .container {
+    --top-left-border-radius: 1vh;
+    --right-border-radius: 1vh;
+    --border-bottom-left-radius: 1vh;
+    padding-top: 20px; /* Smaller padding for mobile */
+  }
 }

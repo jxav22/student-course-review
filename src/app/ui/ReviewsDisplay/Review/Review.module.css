@@ -7,7 +7,9 @@
   min-height: 27vh;
   --border-radius: 0.5rem;
   border-radius: var(--border-radius);
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow:
+    rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .header {
@@ -31,4 +33,10 @@
   flex-direction: column;
   font-size: 1.5vh;
   max-width: 90%;
+}
+
+@media (max-width: 600px) {
+  .header > article:nth-last-child(-n + 3) {
+    display: none;
+  }
 }
