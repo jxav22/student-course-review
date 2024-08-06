@@ -30,9 +30,3 @@
   background-color: white;
   opacity: 50%;
 }
-
-@media (max-width: 768px) {
-  .logoContainer {
-    display: none;
-  }
-}

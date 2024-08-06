@@ -54,6 +54,11 @@
     --top-left-border-radius: 1vh;
     --right-border-radius: 1vh;
     --border-bottom-left-radius: 1vh;
-    padding-top: 20px; /* Smaller padding for mobile */
+
+    grid-template-columns: auto 1px;
+  }
+
+  .logoPositioner {
+    opacity: 0;
   }
 }
