@@ -35,7 +35,7 @@
   max-width: 90%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .header > article:nth-last-child(-n + 3) {
     display: none;
   }

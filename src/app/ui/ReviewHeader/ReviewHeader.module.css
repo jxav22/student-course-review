@@ -49,7 +49,7 @@
 }
 
 /* Mobile styles */
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .container {
     --top-left-border-radius: 1vh;
     --right-border-radius: 1vh;
