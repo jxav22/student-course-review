@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Review.module.css";
 import LabelledStarRating from "../../LabelledStarRating/LabelledStarRating";
-import { Review } from "@/app/lib/types";
+import type { Review as ReviewType } from "@/app/lib/types";
 
-type Props = { review: Review };
+type Props = { review: ReviewType };
 
 export default function Review({ review }: Props) {
   return (
