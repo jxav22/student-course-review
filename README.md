@@ -2,7 +2,7 @@
 
 ## The Problem
 
-Every 2 years or so, the software engineering students at the University of Auckland come together and attempt to create website for submitting course reviews.
+Every 2 years or so, the software engineering students at the University of Auckland come together and attempt to create a website for submitting course reviews.
 And every 2 years, without fail, the website shuts down.
 
 - [http://www.studentcoursereview.com/](https://web.archive.org/web/20210313111051/http://www.studentcoursereview.com/)
@@ -10,7 +10,7 @@ And every 2 years, without fail, the website shuts down.
 
 Why? 
 
-Upkeep costs were pretty steep for each service. After attempting to scale their websites, the costs started to become unbearable.
+Upkeep costs are pretty steep for this kind of service. After attempting to scale their websites, the costs started to go out of control and they had to scrap everything.
 
 ## The Solution
 
@@ -29,17 +29,19 @@ I will create a highly optimized website, that will be able to run for *free*, f
 
 ### Trello
 
-This is the trello board that i'm using for project managment, i'm keeping it updated with the current status of the project
+This is the trello board that i'm using for project managment, i'm keeping it updated with the current state of the project
 
 [>> The trello board](https://trello.com/b/ooukvJUt/student-course-review)
 
 ### Figma design
 
-I started of with ideating a design in figma - I'm pretty new to graphic design, I tried for something minimal and functional.
+I started of with ideating a design in figma.
 
 [>> The figma design file](https://www.figma.com/community/file/1396750512356365480)
 
 I tried to stay consistent with the style my university uses, hopefully there won't be a copyright issue in the future
+
+I tried for something minimal and functional, but I like how it turned out
 
 ### Implementation
 
@@ -47,7 +49,7 @@ This is what i've currently done:
 - Validated that it will work, for free, indefinitely
 - Created and deployed a website -> [https://jxav22.github.io/student-course-review/](https://jxav22.github.io/student-course-review/)
   
-  Notably: I didn't use any design libraries, so everything was written from the bottom up! While this is of course a skills flex, I think it also gave the project a pretty unique look
+  Notably: I didn't use any design libraries, so everything was written from the bottom up! While this is of course a skills flex (?), I think it also gave the project a pretty unique look
 - Populated it with scraped reviews from the sites that shut down -> 
   [webscraping repository](https://github.com/jxav22/StudentCourseReviewScraper)
 - Set up a service using google forms to allow people to submit reviews
@@ -58,6 +60,7 @@ This is what i've currently done:
 - Scraping more reviews
 - Doing some advertising
 - Migrating the reviews to a SQL database
+- (tastefully) incoporating design libraries to migitate weak points
 
 ## Running it
 
