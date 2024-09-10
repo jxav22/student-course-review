@@ -50,12 +50,14 @@ This is what i've currently done:
   Notably: I didn't use any design libraries, so everything was written from the bottom up! While this is of course a skills flex, I think it also gave the project a pretty unique look
 - Populated it with scraped reviews from the sites that shut down -> 
   [webscraping repository](https://github.com/jxav22/StudentCourseReviewScraper)
+- Set up a service using google forms to allow people to submit reviews
 
 ### What's next?
 
-- Setting up the backend service
+- Automating the backend service
 - Scraping more reviews
 - Doing some advertising
+- Migrating the reviews to a SQL database
 
 ## Running it
 
