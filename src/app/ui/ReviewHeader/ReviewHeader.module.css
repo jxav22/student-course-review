@@ -48,7 +48,7 @@
   color: #736e6e;
 }
 
-/* Mobile styles */
+/* Mobile styles
 @media (max-width: 900px) {
   .container {
     --top-left-border-radius: 1vh;
@@ -61,4 +61,4 @@
   .logoPositioner {
     opacity: 0;
   }
-}
+} */
