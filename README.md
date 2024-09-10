@@ -33,10 +33,6 @@ This is the trello board that i'm using for project managment, i'm keeping it up
 
 [>> The trello board](https://trello.com/b/ooukvJUt/student-course-review)
 
-### Conceptualization
-
-(i'll add the details after i've finished the implementation)
-
 ### Figma design
 
 I started of with ideating a design in figma - I'm pretty new to graphic design, I tried for something minimal and functional.
@@ -49,15 +45,16 @@ I tried to stay consistent with the style my university uses, hopefully there wo
 
 This is what i've currently done:
 - Validated that it will work, for free, indefinitely
-- Created and deployed a website
+- Created and deployed a website -> [https://jxav22.github.io/student-course-review/](https://jxav22.github.io/student-course-review/)
   
   Notably: I didn't use any design libraries, so everything was written from the bottom up! While this is of course a skills flex, I think it also gave the project a pretty unique look
-- Populated it with scraped reviews from the sites that shut down
+- Populated it with scraped reviews from the sites that shut down -> 
+  [webscraping repository](https://github.com/jxav22/StudentCourseReviewScraper)
 
 ### What's next?
 
 - Setting up the backend service
-- Scraping all the reviews from the fallen websites
+- Scraping more reviews
 - Doing some advertising
 
 ## Running it
@@ -80,6 +77,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Viewing a deployment
 
-There is a bit of an issue where it reloads continously at the beginning
+I hosted everything on github pages:
 
 [https://jxav22.github.io/student-course-review/](https://jxav22.github.io/student-course-review/)
+
+[https://github.com/jxav22/student-course-review/deployments/github-pages](https://github.com/jxav22/student-course-review/deployments/github-pages)
+
+\>\> Try searching for "ELECTENG 101" for a course with a lot of reviews!
+
+I also experimented with deploying it on Vercel, but it unfortunately takes more than 45 minutes to build :')
+
+[https://github.com/jxav22/student-course-review/deployments/Production](https://github.com/jxav22/student-course-review/deployments/Production)
+
+
